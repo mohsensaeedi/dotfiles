@@ -136,7 +136,8 @@ for_window [class="vmware-workstation"] floating enable
 
 # dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id synapse
 
 # terminal
 bindsym $mod+Return exec gnome-terminal
@@ -352,10 +353,14 @@ bindsym $mod+r mode "resize"
 
 #you can also use the mouse for resizing
 
-#===volume control===
+#===alsamixer volume control===
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 0 -q set Master 2dB- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+#===pactl volume control===
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 #===power manager===
 set $mode_system select: lock(L) exit(E) reboot(R) poweroff(O) cancel(Esc)

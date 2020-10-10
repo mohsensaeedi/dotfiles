@@ -26,6 +26,7 @@ To view the screenshot of whole screen, scroll down...
   - scrot and ksnapshot
   - alsa-utils
   - networkmanager、nm-connection-editor nm-applet
+  - synapse
 
 - Clone the repo into ~/.config/i3
 
