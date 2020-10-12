@@ -210,6 +210,7 @@ assign [class="chromium-browser"] $WS2
 assign [class="wps-office-wpp"] $WS3
 assign [class="wps-office-wps"] $WS3
 assign [class="wps-office-et"] $WS3
+assign [class="libreoffice-calc"] $WS3
 assign [class="Evince"] $WS3
 assign [class="evince"] $WS3
 assign [class="okular"] $WS3
@@ -225,6 +226,7 @@ assign [class="TelegramDesktop"] $WS4
 assign [class="PCManFM"] $WS5
 assign [class="pcmanfm"] $WS5
 assign [class="Org.gnome.Nautilus"] $WS5
+assign [class="KeePassXC"] $WS5
 
 
 assign [class="Code"] $WS6
