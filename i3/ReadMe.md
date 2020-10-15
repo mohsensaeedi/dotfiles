@@ -28,6 +28,7 @@ To view the screenshot of whole screen, scroll down...
   - networkmanager、nm-connection-editor nm-applet
   - synapse
   - pasystray
+  - starcal
 
 - Clone the repo into ~/.config/i3
 
