@@ -419,4 +419,5 @@ bindsym $mod+space exec /home/$USER/.config/i3/i3-keyboard-layout cycle us ir
 #New Key binding#
 bindsym $mod+g exec zenity --calendar
 bindsym $mod+Control+s exec --no-startup-id systemctl suspend
+bindsym	$mod+a exec arandr
 

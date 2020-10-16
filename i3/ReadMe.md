@@ -29,6 +29,7 @@ To view the screenshot of whole screen, scroll down...
   - synapse
   - pasystray
   - starcal
+  - arandr
 
 - Clone the repo into ~/.config/i3
 
