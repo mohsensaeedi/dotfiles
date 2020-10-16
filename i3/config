@@ -418,4 +418,5 @@ bindsym $mod+space exec /home/$USER/.config/i3/i3-keyboard-layout cycle us ir
 #$exec "setxkbmap -option 'grp:alt_shift_toggle'"
 #New Key binding#
 bindsym $mod+g exec zenity --calendar
+bindsym $mod+Control+s exec --no-startup-id systemctl suspend
 
