@@ -81,3 +81,7 @@ Also we can use the `Mod+p` to jump to the opened window by searching its title
 - Reference setting: [Reference Setting](https://github.com/erikdubois/LinuxMint182i3 "i3wm-config")
 - Reference setting: [Reference Setting](https://github.com/ID1258/oh-my-i3 "i3wm-config")
 - Deepin Linux design to know the some details of the DE and WM: [Learn](http://www.jianshu.com/p/e871723f9460 "i3wm-config")
+
+
+# Using the keyring outside GNOME
+[How to keyring outside GNOME](https://wiki.archlinux.org/index.php/GNOME/Keyring#Using_the_keyring_outside_GNOME)
