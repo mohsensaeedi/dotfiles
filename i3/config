@@ -12,7 +12,7 @@ exec --no-startup-id redshift
 exec --no-startup-id fcitx
 exec --no-startup-id flameshot
 exec --no-startup-id nextcloud
-exec --no-startup-id google-chrome --password-store=gnome
+exec --no-startup-id google-chrome --password-store=gnome --use-cmd-decoder=validating --use-gl=desktop
 #exec --no-startup-id /home/hexiongjun/Soft/electronic-wechat-linux-x64/electronic-wechat &
 #exec --no-startup-id megasync
 #exec --no-startup-id ss-qt5 &
@@ -20,6 +20,7 @@ exec --no-startup-id google-chrome --password-store=gnome
 exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id /usr/bin/pasystray
 exec --no-startup-id starcal3
+exec --no-startup-id dunst
 
 
 
@@ -39,6 +40,7 @@ exec ~/.config/i3/wallpaper.sh &
 #   https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/RobotoMono/complete
 #  Then Install them
 #  https://www.nerdfonts.com/cheat-sheet
+font monospace 11
 font pango:FontAwesome 11
 font pango:Roboto Mono, Awesome 11
 font pango:RobotoMono Nerd Font 11
@@ -46,11 +48,11 @@ font pango:RobotoMono Nerd Font 11
 #---bar---
 
 bar {
-    verbose yes
+    #verbose yes
     font pango:DejaVu Sans Mono, FontAwesome 12
     #position top
     #status_command /usr/bin/i3status-rs /home/$USER/.config/i3/status.toml |& tee /tmp/out.log
-    status_command /usr/bin/i3status-rs /home/$USER/.config/i3/status.toml
+    status_command /usr/bin/i3status-rs /home/$USER/.config/i3/status.toml 
     colors {
         separator #666666
         background #222222
@@ -232,6 +234,7 @@ assign [class="KeePassXC"] $WS5
 
 assign [class="Code"] $WS6
 assign [class="jetbrains-phpstorm"] $WS6
+assign [class="Apache Directory Studio"] $WS6
 
 
 assign [class="Anydesk"] $WS9
@@ -419,5 +422,4 @@ bindsym $mod+space exec /home/$USER/.config/i3/i3-keyboard-layout cycle us ir
 #New Key binding#
 bindsym $mod+g exec zenity --calendar
 bindsym $mod+Control+s exec --no-startup-id systemctl suspend
-bindsym	$mod+a exec arandr
-
+bindsym $mod+a exec arandr

@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Name=Apache Directory Studio
+GenericName=Apache Directory Studio
+Comment=Apache Directory Studio for LDAP Services
+#Exec=/usr/bin/telegram-desktop -- %u
+Exec=/home/mohsen/gitlab/ApacheDirectoryStudio/ApacheDirectoryStudio
+Icon=/home/mohsen/gitlab/ApacheDirectoryStudio/features/org.apache.directory.studio.nls.feature_2.0.0.v20200411-M15/studio.png
+Terminal=false
+StartupWMClass=ApacheDirectoryStudio
+Type=Application
+Categories=Network;Development;
+MimeType=x-scheme-handler/tg;
+Keywords=ldap;
+X-GNOME-UsesNotifications=true
