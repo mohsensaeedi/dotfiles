@@ -21,6 +21,7 @@ exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id /usr/bin/pasystray
 exec --no-startup-id starcal3
 exec --no-startup-id dunst
+exec --no-startup-id solaar -w hide
 
 
 
@@ -93,7 +94,8 @@ bar {
 
 # Find the window use dmenu to select an open window
 ## script got from: https://github.com/minos-org/minos-desktop-tools/blob/master/tools/dmenu-i3-window-jumper
-bindsym $mod+p exec /home/$USER/.config/i3/dmenu-i3-window-jumper.sh
+#bindsym $mod+p exec /home/$USER/.config/i3/dmenu-i3-window-jumper.sh
+bindcode $mod+33 exec /home/$USER/.config/i3/dmenu-i3-window-jumper.sh
 #bindsym $mod+p exec python /home/$USER/.config/i3/i3-wm-scripts/nextfind.py
 
 #---window style---
@@ -144,13 +146,15 @@ for_window [class="Gnome-calculator"] floating enable
 # dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 #bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id synapse
+#bindsym $mod+d exec --no-startup-id synapse
+bindcode $mod+40 exec --no-startup-id synapse
 
 # terminal
 bindsym $mod+Return exec gnome-terminal
 
 # browsers
-bindsym $mod+Shift+f exec firefox
+#bindsym $mod+Shift+f exec firefox
+bindcode $mod+Shift+41 exec firefox
 
 # printscreen(use "scrot".Print=PrtSc/PrintScreen)
 ## The -s is to screen shot a section
@@ -166,7 +170,8 @@ bindsym $mod+Print 	exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 
 
 # GUI file manager
-bindsym $mod+e 			exec --no-startup-id pcmanfm
+#bindsym $mod+e 			exec --no-startup-id pcmanfm
+bindcode $mod+26 			exec --no-startup-id pcmanfm
 
 
 #===workspace control===
@@ -246,34 +251,45 @@ bindsym $mod+Tab workspace next
 bindsym mod1+Tab workspace prev
 
 # switch to workspace
-bindsym $mod+1 workspace $WS1
-bindsym $mod+2 workspace $WS2
-bindsym $mod+3 workspace $WS3
-bindsym $mod+4 workspace $WS4
-bindsym $mod+5 workspace $WS5
-bindsym $mod+6 workspace $WS6
-bindsym $mod+7 workspace $WS7
-bindsym $mod+8 workspace $WS8
-bindsym $mod+9 workspace $WS9
-bindsym $mod+0 workspace $WS10
+bindcode $mod+10 workspace $WS1
+bindcode $mod+11 workspace $WS2
+bindcode $mod+12 workspace $WS3
+bindcode $mod+13 workspace $WS4
+bindcode $mod+14 workspace $WS5
+bindcode $mod+15 workspace $WS6
+bindcode $mod+16 workspace $WS7
+bindcode $mod+17 workspace $WS8
+bindcode $mod+18 workspace $WS9
+bindcode $mod+19 workspace $WS10
+#bindsym $mod+1 workspace $WS1
+#bindsym $mod+2 workspace $WS2
+#bindsym $mod+3 workspace $WS3
+#bindsym $mod+4 workspace $WS4
+#bindsym $mod+5 workspace $WS5
+#bindsym $mod+6 workspace $WS6
+#bindsym $mod+7 workspace $WS7
+#bindsym $mod+8 workspace $WS8
+#bindsym $mod+9 workspace $WS9
+#bindsym $mod+0 workspace $WS10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $WS1
-bindsym $mod+Shift+2 move container to workspace $WS2
-bindsym $mod+Shift+3 move container to workspace $WS3
-bindsym $mod+Shift+4 move container to workspace $WS4
-bindsym $mod+Shift+5 move container to workspace $WS5
-bindsym $mod+Shift+6 move container to workspace $WS6
-bindsym $mod+Shift+7 move container to workspace $WS7
-bindsym $mod+Shift+8 move container to workspace $WS8
-bindsym $mod+Shift+9 move container to workspace $WS9
-bindsym $mod+Shift+0 move container to workspace $WS10
+bindcode $mod+Shift+10 move container to workspace $WS1
+bindcode $mod+Shift+11 move container to workspace $WS2
+bindcode $mod+Shift+12 move container to workspace $WS3
+bindcode $mod+Shift+13 move container to workspace $WS4
+bindcode $mod+Shift+14 move container to workspace $WS5
+bindcode $mod+Shift+15 move container to workspace $WS6
+bindcode $mod+Shift+16 move container to workspace $WS7
+bindcode $mod+Shift+17 move container to workspace $WS8
+bindcode $mod+Shift+18 move container to workspace $WS9
+bindcode $mod+Shift+19 move container to workspace $WS10
 
 
 #===window control===
 
 # fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+#bindsym $mod+f fullscreen toggle
+bindcode $mod+41 fullscreen toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -286,10 +302,13 @@ bindsym $mod+minus move scratchpad
 bindsym $mod+plus scratchpad show
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+c layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+t layout tabbed
+#bindsym $mod+c layout toggle split
 
+bindcode $mod+39 layout stacking
+bindcode $mod+28 layout tabbed
+bindcode $mod+54 layout toggle split
 # change border style
 bindsym $mod+u border none
 bindsym $mod+n border normal
@@ -305,10 +324,15 @@ bindsym $mod+b border toggle
 focus_follows_mouse yes
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+#bindsym $mod+h focus left
+#bindsym $mod+j focus down
+#bindsym $mod+k focus up
+#bindsym $mod+l focus right
+
+bindcode $mod+43 focus left
+bindcode $mod+44 focus down
+bindcode $mod+45 focus up
+bindcode $mod+46 focus right
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -327,10 +351,14 @@ bindsym $mod+Right focus right
 floating_modifier $mod
 
 # move floating/tiling window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+#bindsym $mod+Shift+h move left
+#bindsym $mod+Shift+j move down
+#bindsym $mod+Shift+k move up
+#bindsym $mod+Shift+l move right
+bindcode $mod+Shift+43 move left
+bindcode $mod+Shift+44 move down
+bindcode $mod+Shift+45 move up
+bindcode $mod+Shift+46 move right
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -379,7 +407,8 @@ bindsym XF86AudioMute exec --no-startup-id /usr/bin/pactl set-sink-mute @DEFAULT
 
 #===power manager===
 set $mode_system select: lock(L) exit(E) reboot(R) poweroff(O) cancel(Esc)
-bindsym $mod+Shift+q mode "$mode_system"
+#bindsym $mod+Shift+q mode "$mode_system"
+bindcode $mod+Shift+24 mode "$mode_system"
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3lock -c '#000000', mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
@@ -420,6 +449,9 @@ bindsym $mod+space exec /home/$USER/.config/i3/i3-keyboard-layout cycle us ir
 #$exec "setxkbmap -layout us,ir"
 #$exec "setxkbmap -option 'grp:alt_shift_toggle'"
 #New Key binding#
-bindsym $mod+g exec zenity --calendar
-bindsym $mod+Control+s exec --no-startup-id systemctl suspend
-bindsym $mod+a exec arandr
+#bindsym $mod+g exec zenity --calendar
+#bindsym $mod+Control+s exec --no-startup-id systemctl suspend
+#bindsym $mod+a exec arandr
+bindcode $mod+42 exec zenity --calendar
+bindcode $mod+Control+39 exec --no-startup-id systemctl suspend
+bindcode $mod+38 exec arandr
