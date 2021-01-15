@@ -142,7 +142,9 @@ for_window [class="Gnome-calculator"] floating enable
 
 
 #===programs shortcuts===
-
+bindsym $mod+Shift+d exec /home/mohsen/.screenlayout/single.sh
+bindsym $mod+Shift+m exec /home/mohsen/.screenlayout/multi.sh
+bindsym $mod+Shift+n exec /home/mohsen/.screenlayout/laptop.sh
 # dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 #bindsym $mod+d exec --no-startup-id dmenu_run
@@ -205,6 +207,8 @@ set $WS10 0: 
 #workspace "9:Mail" output eDP1
 
 # putting clients on specific workspaces
+assign [class="Apache Directory Studio"] $WS10
+
 assign [class="terminator"] $WS1
 assign [class="gnome-terminal"] $WS1
 assign [class="securecrt"] $WS1
@@ -239,7 +243,6 @@ assign [class="KeePassXC"] $WS5
 
 assign [class="Code"] $WS6
 assign [class="jetbrains-phpstorm"] $WS6
-assign [class="Apache Directory Studio"] $WS6
 
 
 assign [class="Anydesk"] $WS9
