@@ -12,7 +12,8 @@ exec --no-startup-id redshift
 exec --no-startup-id fcitx
 exec --no-startup-id flameshot
 exec --no-startup-id nextcloud
-exec --no-startup-id google-chrome --password-store=gnome --use-cmd-decoder=validating --use-gl=desktop
+#exec --no-startup-id google-chrome --password-store=gnome --use-cmd-decoder=validating --use-gl=desktop
+exec --no-startup-id firefox
 #exec --no-startup-id /home/hexiongjun/Soft/electronic-wechat-linux-x64/electronic-wechat &
 #exec --no-startup-id megasync
 #exec --no-startup-id ss-qt5 &
@@ -50,7 +51,7 @@ font pango:RobotoMono Nerd Font 11
 
 bar {
     #verbose yes
-    font pango:DejaVu Sans Mono, FontAwesome 12
+    font pango:DejaVu Sans Mono, FontAwesome 10
     #position top
     #status_command /usr/bin/i3status-rs /home/$USER/.config/i3/status.toml |& tee /tmp/out.log
     status_command /usr/bin/i3status-rs /home/$USER/.config/i3/status.toml 
@@ -213,7 +214,7 @@ assign [class="terminator"] $WS1
 assign [class="gnome-terminal"] $WS1
 assign [class="securecrt"] $WS1
 
-assign [class="firefox"] $WS2
+assign [class="Firefox"] $WS2
 assign [class="chrome"] $WS2
 assign [class="vivaldi-stable"] $WS2
 assign [class="Vivaldi"] $WS2
@@ -458,3 +459,4 @@ bindsym $mod+space exec /home/$USER/.config/i3/i3-keyboard-layout cycle us ir
 bindcode $mod+42 exec zenity --calendar
 bindcode $mod+Control+39 exec --no-startup-id systemctl suspend
 bindcode $mod+38 exec arandr
+bindsym  $mod+Control+r exec --no-startup-id /usr/bin/flameshot gui
