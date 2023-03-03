@@ -1,0 +1,146 @@
+{
+    "height": 20, // Waybar height (to be removed for auto height)
+    "position": "bottom",
+    "spacing": 1, // Gaps between modules (4px)
+    "modules-left": ["sway/workspaces", "mpris", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["pulseaudio", "memory", "cpu", "temperature", "battery", "network", "sway/language", "tray", "clock"],
+    // Modules configuration
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1:  ",
+            "2": "2: ",
+            "3": "3:  ",
+            "4": "4: ",
+            "5": "5:  ",
+            "6": "6:  ",
+	    "7": "7: ",
+            "8": "8:",
+            "9": "9:",
+	    "10": "0: ",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/window": {
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "format": "  {:%a %d %b, %I:%M %p}"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "  {}%",
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon}  {temperatureC}°C",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "mpris": {
+	"format": "{player_icon}  {artist} - {title}",
+	"format-paused": "{status_icon}  {artist} - {title}",
+	"player-icons": {
+                "default": "",
+                "spotifyd": "",
+                "spotify": ""
+	},
+	"status-icons": {
+                "paused": ""
+	},
+	"ignored-players": ["firefox"]
+    },
+
+    "custom/pomo": {
+      "exec": "pomo-time",
+      "interval": 1,
+      "on-click": "pomo"
+    },
+
+    "sway/language": {
+        "format": "{short} {variant}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+    },
+
+    "network": {
+    "interface": "wlp0s20f3",
+    "format": "{ifname}",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+    }
+}
