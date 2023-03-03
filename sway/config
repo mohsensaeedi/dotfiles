@@ -17,10 +17,10 @@ exec --no-startup-id firefox-wayland
 #exec --no-startup-id megasync
 #exec --no-startup-id ss-qt5 &
 #exec --no-startup-id xcompmgr &
-exec --no-startup-id gnome-keyring-daemon
+#exec --no-startup-id gnome-keyring-daemon
 exec --no-startup-id /usr/bin/pasystray
 exec --no-startup-id starcal3
-exec --no-startup-id dunst
+#exec --no-startup-id dunst
 exec --no-startup-id solaar -w hide
 exec --no-startup-id sudo /opt/nekoray/launcher
 
@@ -229,7 +229,7 @@ bindsym $mod+r mode "resize"
 default_border pixel 1
 
 # Gaps config
-gaps inner 10
+gaps inner 5
 smart_gaps on
 smart_borders on
 
@@ -255,15 +255,20 @@ input type:touchpad {
     natural_scroll enabled
 }
 
-input * {
+input "1133:49974:Logitech_Gaming_Keyboard_G213" {
     xkb_layout "us,ir"
+    xkb_numlock enabled
     xkb_options "grp:alt_shift_toggle"
 }
 
-input <identifier> xkb_model "pc101"
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_layout "us,ir"
+    xkb_model "pc101"
+    xkb_options "grp:alt_shift_toggle"
+}
 
 #input type:keyboard xkb_capslock enabled
-input type:keyboard xkb_numlock enabled
+#input type:keyboard xkb_numlock enabled
 
 for_window [app_id="__floating"] floating enable
 for_window [class="__floating"] floating enable
@@ -274,6 +279,8 @@ for_window [app_id="__scratchpad"] move scratchpad
 
 for_window [title="Catia"] floating enable
 for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="mpv"] floating enable
+for_window [app_id="org.gnome.Calculator"] floating enable
 for_window [class="qpwgraph"] floating enable, resize set height 800
 
 bindsym $mod+p exec "patchbay"
@@ -298,6 +305,9 @@ assign [app_id="firefox-wayland"] focus
 
 assign [app_id="Apache Directory Studio"] 10
 assign [app_id="Apache Directory Studio"] focus
+
+assign [app_id="evince"] 3
+assign [app_id="evince"] focus
 
 assign [app_id="org.telegram.desktop"] 4
 assign [app_id="org.telegram.desktop"] focus
