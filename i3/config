@@ -23,6 +23,7 @@ exec --no-startup-id /usr/bin/pasystray
 exec --no-startup-id starcal3
 exec --no-startup-id dunst
 exec --no-startup-id solaar -w hide
+exec --no-startup-id sudo /opt/nekoray/launcher
 
 
 
@@ -125,7 +126,7 @@ for_window [class="mpv"] floating enable
 for_window [class="Gimp"] floating enable
 for_window [class="Xarchiver"] floating enable
 for_window [class="Genymotion"] floating enable
-for_window [class="Vlc"] floating enable
+for_window [class="vlc"] floating enable
 for_window [class="workrave"] floating enable
 #for_window [class="firefox"] floating enable
 for_window [class="electronic-wechat"] floating enable
@@ -139,7 +140,7 @@ for_window [class="thunderbird"] floating enable
 for_window [class="VirtualBox"] floating enable
 for_window [class="shadowsocks-qt5"] floating enable
 for_window [class="vmware-workstation"] floating enable
-for_window [class="Gnome-calculator"] floating enable
+for_window [class="gnome-calculator"] floating enable
 
 
 #===programs shortcuts===
@@ -244,6 +245,9 @@ assign [class="KeePassXC"] $WS5
 
 assign [class="Code"] $WS6
 assign [class="jetbrains-phpstorm"] $WS6
+assign [class="jetbrains-pycharm"] $WS6
+assign [class="jetbrains-idea"] $WS6
+assign [class="Atom"] $WS6
 
 
 assign [class="Anydesk"] $WS9
@@ -458,5 +462,6 @@ bindsym $mod+space exec /home/$USER/.config/i3/i3-keyboard-layout cycle us ir
 #bindsym $mod+a exec arandr
 bindcode $mod+42 exec zenity --calendar
 bindcode $mod+Control+39 exec --no-startup-id systemctl suspend
+#Code 38 is a
 bindcode $mod+38 exec arandr
 bindsym  $mod+Control+r exec --no-startup-id /usr/bin/flameshot gui
