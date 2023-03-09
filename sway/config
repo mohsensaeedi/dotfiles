@@ -315,6 +315,9 @@ assign [app_id="org.telegram.desktop"] focus
 assign [app_id="org.gnome.Nautilus"] 5
 assign [app_id="org.gnome.Nautilus"] focus
 
+assign [app_id="org.keepassxc.KeePassXC"] 5
+assign [app_id="org.keepassxc.KeePassXC"] focus
+
 assign [class="jetbrains-pycharm"] 6
 assign [class="jetbrains-pycharm"] focus
 
@@ -346,7 +349,7 @@ output "*" bg ~/Pictures/wallpaper/nature-3082832_1920.jpg stretch
 
 focus output HDMI-A-1
 
-exec_always ~/.bin/laptop_lid.sh
+exec_always ~/.local/bin/laptop_lid.sh
 
 exec gammastep -t 5700:3500 -l -21:149
 
@@ -357,7 +360,7 @@ exec steam -silent
 exec mako
 exec_always fcitx5 -d --replace
 
-bindsym $mod+shift+s exec screenshot
+bindsym $mod+shift+s exec ~/.local/bin/screenshot
 bindsym $mod+shift+a exec screenshot-and-open
 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -436,6 +439,7 @@ bindsym --to-code {
 
     # Move the currently focused window to the scratchpad
     $mod+Shift+minus move scratchpad
+    $mod+Control+S exec --no-startup-id systemctl suspend
 }
 
 include /etc/sway/config.d/*
