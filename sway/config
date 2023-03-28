@@ -22,7 +22,8 @@ exec --no-startup-id /usr/bin/pasystray
 exec --no-startup-id starcal3
 #exec --no-startup-id dunst
 exec --no-startup-id solaar -w hide
-exec --no-startup-id sudo /opt/nekoray/launcher
+#Install polkit-gnome
+exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
 
 #exec ~/.config/i3/wallpaper.sh &
 ### Variables
