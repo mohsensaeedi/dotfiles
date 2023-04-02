@@ -299,6 +299,7 @@ for_window [class="REAPER" title="MIDI take:.*"] floating enable
 for_window [class="Steam" title="Steam - News.*"] floating enable
 for_window [class="Steam" title="Create or select new Steam library folder:"] floating enable
 for_window [class="steam_app_.*" title="Origin"] floating enable
+for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enable
 
 # putting clients on specific workspaces
 assign [app_id="firefox-wayland"] 2
