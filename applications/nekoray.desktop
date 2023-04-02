@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=NekoRay
+Categories=Network
+Comment=Qt based cross-platform GUI proxy configuration manager (backend: v2ray / sing-box)
+Keywords=Internet;VPN;Proxy;v2ray;sing-box;
+Exec=/opt/nekoray/nekoray
+Icon=/opt/nekoray/nekoray.png

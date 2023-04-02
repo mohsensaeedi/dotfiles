@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Melodify
+Categories=Entertainment
+Comment=Melodify music library
+Keywords=Melodify;Music
+Exec=/opt/melodify/Melodify
+Icon=/opt/melodify/logo.png
