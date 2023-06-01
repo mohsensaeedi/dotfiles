@@ -24,6 +24,7 @@ exec --no-startup-id starcal3
 exec --no-startup-id dunst
 exec --no-startup-id solaar -w hide
 exec --no-startup-id sudo /opt/nekoray/launcher
+exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1
 
 
 
@@ -97,7 +98,8 @@ bar {
 # Find the window use dmenu to select an open window
 ## script got from: https://github.com/minos-org/minos-desktop-tools/blob/master/tools/dmenu-i3-window-jumper
 #bindsym $mod+p exec /home/$USER/.config/i3/dmenu-i3-window-jumper.sh
-bindcode $mod+33 exec /home/$USER/.config/i3/dmenu-i3-window-jumper.sh
+#bindcode $mod+33 exec /home/$USER/.config/i3/dmenu-i3-window-jumper.sh
+bindcode $mod+33 exec --no-startup-id rofi -show combi -run-command "i3-msg exec '{cmd}'" -show-icons
 #bindsym $mod+p exec python /home/$USER/.config/i3/i3-wm-scripts/nextfind.py
 
 #---window style---

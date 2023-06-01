@@ -34,6 +34,9 @@ To view the screenshot of whole screen, scroll down...
     `cd ~/.config/i3`
 
 - Install the font i3status-conky/fontawesome-webfont.ttf
+- Install i3status-rust as replacement for i3satus
+    `dnf copr enable atim/i3status-rust`
+    `dnf install i3status-rust`
 
 - Get the window list jumper script
 
