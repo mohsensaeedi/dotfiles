@@ -5,13 +5,14 @@ local function font_with_fallback(name, params)
 	return wezterm.font_with_fallback(names, params)
 end
 
-local font_name = "Source Code Pro"
+local font_name = "JetBrainsMono Nerd Font"
 
 return {
 	-- OpenGL for GPU acceleration, Software for CPU
 	front_end = "OpenGL",
 
-	color_scheme = 'FarSide (terminal.sexy)',
+	--[[color_scheme = 'Catppuccin Mocha',]]--
+	color_scheme = 'MaterialDark',
 
 	-- Font config
 	font = font_with_fallback(font_name),
@@ -108,7 +109,7 @@ return {
 			action = wezterm.action({ SpawnTab = "CurrentPaneDomain" }),
 		},
 		{
-			key = "w",
+			key = "W",
 			mods = "CTRL",
 			action = wezterm.action({ CloseCurrentTab = { confirm = false } }),
 		},
