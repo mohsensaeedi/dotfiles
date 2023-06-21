@@ -12,7 +12,7 @@ return {
 	front_end = "OpenGL",
 
 	--[[color_scheme = 'Catppuccin Mocha',]]--
-	color_scheme = 'MaterialDark',
+	color_scheme = 'Doom Peacock',
 
 	-- Font config
 	font = font_with_fallback(font_name),
