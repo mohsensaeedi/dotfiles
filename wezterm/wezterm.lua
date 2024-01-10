@@ -33,6 +33,7 @@ return {
 	warn_about_missing_glyphs = false,
 	font_size = 10,
 	line_height = 1.0,
+	bidi_enabled = true,
 	dpi = 96.0,
 
 	-- Cursor style
