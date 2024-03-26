@@ -61,6 +61,7 @@ bar {
     #position top
     #status_command /usr/bin/i3status-rs /home/$USER/.config/i3/status.toml |& tee /tmp/out.log
     status_command /usr/bin/i3status-rs /home/$USER/.config/i3/status.toml 
+    tray_output primary
     #status_command py3status
     colors {
         separator #666666
