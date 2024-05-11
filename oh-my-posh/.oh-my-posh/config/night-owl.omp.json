@@ -398,7 +398,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "\ue285\ue285",
+          "template": " <b>{{ .UserName }}</b> \ue285\ue285",
           "type": "status"
         }
       ],
